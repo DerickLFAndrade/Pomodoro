@@ -1,0 +1,1 @@
+Aplicativo de gerenciamento de tempo para melhorar a produtividade das atividade diárias. Conhecido como "pomodoro". 

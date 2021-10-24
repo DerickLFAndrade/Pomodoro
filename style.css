@@ -1,0 +1,152 @@
+body {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+   
+    background: skyblue;
+}
+header {
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: black;
+    color: white;
+    width: 100vw;
+}
+.lista-nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    width: 93vw;
+}
+.nav-item {
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px;
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+}
+
+.container {
+   width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.pomodoro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 250px;
+    height: 270px;
+    border-radius: 50px;
+     background-image: url('tomate.png');
+     background-size: 260px;
+     box-shadow: 0px 10px 5px black;
+     color: white;
+    border-radius: 100px;
+
+}
+.text-c {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bot-ini {
+    position: absolute;
+    margin-top: 320px;
+    border: none;
+    color: black;
+    border-bottom: 2px solid gray;
+    background: none;
+    border-radius: 10px;
+    width: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 5px;
+    font-size: 20px;
+    box-shadow: 0px 0px 5px black;
+}
+.bot-ini:hover {
+    background: skyblue;
+    box-shadow: 0px 0px 15px black;
+    color: black;
+    font-weight: bold;
+}
+.minutos {
+    
+    margin-left: 40px;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 4px 0px 0px rgb(73, 73, 73);
+}
+.min {
+    margin-left: 5px;
+    margin-top: -45px;
+    font-weight: bold;
+
+}
+.segundos {
+    margin-left: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 4px 0px 0px rgb(73, 73, 73);
+}
+.seg {
+    margin-left: 5px;
+    margin-top: -45px;
+    font-weight: bold;
+
+}
+
+.bot-op {
+    margin-top: 50px;
+    font-weight: bold;
+    border: none;
+    color: black;
+    border-bottom: 2px solid gray;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 65px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 5px;
+}
+.bot-op:hover {
+    background: skyblue;
+    box-shadow: 0px 0px 5px black;
+    color: black;
+    font-weight: bold;
+}
+
+footer {
+    position: fixed;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+     background: black;
+    color: white;
+    width: 100vw;
+}
+.footer-b {
+    list-style-type: none;
+   
+}
+.item-footer {
+   border: 1px solid black;
+    box-shadow: 1px 1px 1px;
+    font-weight: bold;
+    width: 100px;
+    text-align: center; 
+}
