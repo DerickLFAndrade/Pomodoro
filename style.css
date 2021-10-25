@@ -5,7 +5,7 @@ body {
     top: 0;
     left: 0;
    
-    background: skyblue;
+    background: white;
 }
 header {
     left: 0;
@@ -132,7 +132,7 @@ footer {
     position: fixed;
      display: flex;
     justify-content: center;
-    align-items: center;
+   
     bottom: 0;
     left: 0;
      background: black;
@@ -140,6 +140,9 @@ footer {
     width: 100vw;
 }
 .footer-b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
    
 }

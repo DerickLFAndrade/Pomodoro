@@ -3,6 +3,7 @@ function inicio () {
     const audio = document.querySelector('[data-audio]')
     audio.style.display = 'none'
     bot.addEventListener('click', () => {
+        bot.disabled = true;
         pomodoro();
     })
 const pomodoro = () => {
@@ -10,8 +11,9 @@ const pomodoro = () => {
     let minutos = document.querySelector('[data-minutos]')
     let segundos = document.querySelector('[data-segundos]')
    
-    let min = 0;
-    let seg = 0;
+    let min = 24;
+    let seg = 50;
+    minutos.innerHTML = min;
     setInterval(() => {
         if(seg == 59 && min < 25) {
             min++
@@ -20,6 +22,7 @@ const pomodoro = () => {
 
         if(min === 25) {
             audio.play();
+            bot.disabled = false;
         } 
     }, 1000);
 
