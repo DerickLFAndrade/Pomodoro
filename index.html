@@ -34,24 +34,41 @@
                     <span class="segundos" data-segundos>0</span>
                     <span class="seg">seg</span>
                 </section>
+
+                <span class="op-esc" data-op-n></span>
+                <span class="op" data-op-esc></span>
             </span>
 
-            <button class="bot-ini" data-bot-ini>Iniciar</button>
+            <button class="bot-reset" data-bot-reset>Resetar</button>
         </div>
         <section class="opções">
-           
-                <button class="bot-op" data-bot-op1>25min</button>
-                <button class="bot-op" data-bot-op2>50min</button>
-                <button class="bot-op" data-bot-cust>cust</button>
-          
+
+            <button class="bot-op" data-bot-op1>Padrão</button>
+            <button class="bot-op" data-bot-op2>50min</button>
+
+            <span class="cont-bt">
+                
+                <input class="bot-op" id="cust" placeholder="Cust" data-bot-fk ></input>
+
+                <input type="number" class="bot-op" id="cust" data-bot-cust  style="display: none;" placeholder="Min" max="60" ></input>
+
+                <input type="number" style="display: none;" class="bot-op" id="cust" data-bot-pausa
+                    placeholder="Pausa"></input>
+                
+                <button class="iniciar" data-bot-iniciar>Iniciar</button>
+            </span>
+            
         </section>
+        <span data-aviso style="display: none;">
+            <p>Valor máximo para minutos: 60</p>
+        </span>
         <audio data-audio src="alarme.mp3" controls></audio>
     </div>
 
     <footer>
         <ul class="footer-b">
             <li class="item-footer">Pomodoro</li>
-            
+
         </ul>
     </footer>
 

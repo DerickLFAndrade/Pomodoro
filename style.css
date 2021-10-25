@@ -19,9 +19,11 @@ header {
     width: 100vw;
 }
 .lista-nav {
+    
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;   
     width: 93vw;
 }
@@ -63,9 +65,22 @@ header {
     align-items: center;
     flex-direction: column;
 }
-.bot-ini {
+.op-esc {
+    margin-top: 20px;
+    margin-left: 10px;
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: bold;
+}
+.op {
     position: absolute;
-    margin-top: 320px;
+     margin-top:180px;
+    margin-left: 10px;
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: bold; 
+}
+.bot-reset {
+    position: absolute;
+    margin-top: 480px;
     border: none;
     color: black;
     border-bottom: 2px solid gray;
@@ -77,8 +92,8 @@ header {
     font-size: 20px;
     box-shadow: 0px 0px 5px black;
 }
-.bot-ini:hover {
-    background: skyblue;
+.bot-reset:hover {
+    background: greenyellow;
     box-shadow: 0px 0px 15px black;
     color: black;
     font-weight: bold;
@@ -108,22 +123,57 @@ header {
     font-weight: bold;
 
 }
+.opções {
+    display: flex;
 
+}
 .bot-op {
-    margin-top: 50px;
-    font-weight: bold;
-    border: none;
+    margin-top: 20px;
+   border: none;
     color: black;
     border-bottom: 2px solid gray;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    width: 65px;
+    background: none;
+    border-radius: 10px;
+    width: 100px;
     font-family: 'Courier New', Courier, monospace;
     margin-left: 5px;
+    font-size: 20px;
+    box-shadow: 0px 0px 5px black;
 }
 .bot-op:hover {
     background: skyblue;
     box-shadow: 0px 0px 5px black;
+    color: black;
+    font-weight: bold;
+}
+.cont-bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#cust {
+    
+    text-align: center;
+    outline: 0;
+}
+.iniciar{
+    display: none;
+     margin-top: 20px;
+   border: none;
+    color: black;
+    border-bottom: 2px solid gray;
+    background: none;
+    
+    width: 70px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 5px;
+    font-size: 12px;
+    box-shadow: 0px 0px 5px black;
+}
+.iniciar:hover {
+      background: greenyellow;
+    box-shadow: 0px 0px 10px black;
     color: black;
     font-weight: bold;
 }
@@ -152,4 +202,5 @@ footer {
     font-weight: bold;
     width: 100px;
     text-align: center; 
+    margin-left: -50px;
 }
