@@ -61,15 +61,21 @@ function inicio() {
         botPomo50.style.display = 'none'
 
         botIniciar.addEventListener('click', () => {
-            botPomoCust.style.display = 'none'
-            botCustPausa.style.display = 'none'
-            botIniciar.style.display = 'none'
-            aviso.style.display = 'none'
-            if (botPomoCust.value >= 61) {
-                botPomoCust.value = 60  
-            }
-            pomodoroCust();
+            
 
+            if (botPomoCust.value >= 61) {
+                botPomoCust.value = 60
+            }
+
+            if(botPomoCust.value == '' || botCustPausa == '') {
+                alert('Para usar o modo custumizado, por favor, preencha todos os campos!')
+            } else{
+                botPomoCust.style.display = 'none'
+                botCustPausa.style.display = 'none'
+                botIniciar.style.display = 'none'
+                aviso.style.display = 'none'
+                pomodoroCust();
+            }
           
         } )
        
