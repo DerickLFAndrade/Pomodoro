@@ -37,6 +37,7 @@ header {
 }
 
 .container {
+    
    width: 100vw;
     height: 100vh;
     display: flex;
@@ -48,14 +49,14 @@ header {
     position: absolute;
     text-align: left;
     font-family: 'Courier New', Courier, monospace;
-    margin-top: 850px;
+    margin-top: 700px;
    font-size: 14px;
     width: 300px;
     font-weight: bold;
 }
 .texto2 {
     font-size: 14px;
-    margin-top: 1650px;
+    margin-top: 1450px;
     position: absolute;
     font-family: 'Courier New', Courier, monospace;
     width: 300px;
@@ -68,7 +69,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -50px;
+    margin-top: -150px;
     width: 250px;
     height: 270px;
     border-radius: 50px;
