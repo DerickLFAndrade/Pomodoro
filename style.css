@@ -71,7 +71,7 @@ header {
     justify-content: center;
     align-items: center;
     margin-top: -150px;
-    width: 250px;
+    width: 260px;
     height: 270px;
     border-radius: 50px;
      background-image: url('tomate.png');
@@ -79,6 +79,7 @@ header {
      box-shadow: 0px 10px 5px black;
      color: white;
     border-radius: 100px;
+    
 
 }
 .text-c {
@@ -298,7 +299,7 @@ header {
     justify-content: center;
     align-items: center;
     margin-top: -50px;
-    width: 250px;
+    width: 260px;
     height: 270px;
     border-radius: 50px;
      background-image: url('tomate.png');
