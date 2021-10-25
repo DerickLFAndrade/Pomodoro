@@ -5,6 +5,7 @@ function inicio() {
     const botPomoCust = document.querySelector('[data-bot-cust]')
     const botFk = document.querySelector('[data-bot-fk]')
     const audio = document.querySelector('[data-audio]');
+    const botCustPausa = document.querySelector('[data-bot-pausa]')
     audio.style.display = 'none';
     var validador = false;
     
@@ -46,7 +47,7 @@ function inicio() {
         botPomoCust.style.textAlign = 'left'
         botPomoCust.style.textIndent = '10px'
         const botIniciar = document.querySelector('[data-bot-iniciar]')
-        const botCustPausa = document.querySelector('[data-bot-pausa]')
+        
         botCustPausa.style.display = 'block'
         botCustPausa.style.textAlign = 'left'
         botCustPausa.style.textIndent = '10px'
@@ -60,24 +61,23 @@ function inicio() {
         botPomo50.style.display = 'none'
 
         botIniciar.addEventListener('click', () => {
-           
+            botPomoCust.style.display = 'none'
+            botCustPausa.style.display = 'none'
+            botIniciar.style.display = 'none'
+            aviso.style.display = 'none'
             if (botPomoCust.value >= 61) {
                 botPomoCust.value = 60  
             }
+            pomodoroCust();
+
+          
         } )
        
-
+       
 
        
 
     })
-
- 
-
- 
-    
-
-
 
 
 
@@ -87,8 +87,8 @@ function inicio() {
         let minutos = document.querySelector('[data-minutos]');
         let segundos = document.querySelector('[data-segundos]');
 
-        let min = 24;
-        let seg = 58;
+        let min = 0;
+        let seg = 0;
         minutos.innerHTML = min;
         setInterval(() => {
             if (validador == false) {
@@ -108,8 +108,8 @@ function inicio() {
                         pausaM.innerHTML = '5min';
                         validador = true;
                         minutos.innerHTML = 0;
-                        min = 3;
-                        seg = 58;
+                        min = 0;
+                        seg = 0;
 
                         //pausa de 5 minutos
                         setInterval(() => {
@@ -123,10 +123,9 @@ function inicio() {
                                     
                                     setTimeout(() => {
                                         location.reload();
-                                    }, 4000)
-                                   
-                                     pausa5.innerHTML = '';
-                                    pausaM.innerHTML = '';
+                                    }, 3000)
+                                    pausa5.innerHTML = `Fim do ciclo`;
+                                    pausaM.innerHTML = '25/5';
                                     min = 60
                                     seg = 60
                                     segundos.innerHTML = '0';
@@ -140,13 +139,13 @@ function inicio() {
 
 
                             if (validador === true) {
-                                console.log('pausa5')
+                              ('pausa5')
                                 if (seg < 59) {
                                     seg++;
                                     segundos.innerHTML = seg;
                                 } else if (seg == 59) {
                                     segundos.innerHTML = '0';
-                                    seg = 58;
+                                    seg = 0;
                                 }
                             }
 
@@ -155,23 +154,23 @@ function inicio() {
                     }
                     pausa5m();
                 }
-                console.log(validador)
+                
             }
 
         }, 1000);
 
 
-        console.log(validador)
+        
 
         setInterval(() => {
             if (validador === false) {
-                console.log('oi')
+               
                 if (seg < 59) {
                     seg++;
                     segundos.innerHTML = seg;
                 } else if (seg == 59) {
                     segundos.innerHTML = '0';
-                    seg = 58;
+                    seg = 0;
                 }
             }
 
@@ -187,8 +186,8 @@ function inicio() {
         let minutos = document.querySelector('[data-minutos]');
         let segundos = document.querySelector('[data-segundos]');
 
-        let min = 49;
-        let seg = 58;
+        let min = 0;
+        let seg = 0;
         minutos.innerHTML = min;
         setInterval(() => {
             if (validador == false) {
@@ -209,8 +208,8 @@ function inicio() {
                         validador = true;
                         minutos.innerHTML = 0;
 
-                        min = 8;
-                        seg = 58;
+                        min = 0;
+                        seg = 0;
                         //pausa 10min
                         setInterval(() => {
 
@@ -219,8 +218,8 @@ function inicio() {
                                     min++;
                                     minutos.innerHTML = min;
                                 } else if (min === 10) {
-                                    pausa5.innerHTML = 'PROLONGADO';
-                                    pausaM.innerHTML = '50min';
+                                    pausa5.innerHTML = `Fim do ciclo`;
+                                    pausaM.innerHTML = '50/10';
                                     min = 60
                                     seg = 60
                                     segundos.innerHTML = '0';
@@ -229,20 +228,20 @@ function inicio() {
                                     validador = false
                                     setTimeout(() => {
                                         location.reload();
-                                    }, 4000)
+                                    }, 3000)
                                 }
                             }
                             //pausa 10min
 
 
                             if (validador === true) {
-                                console.log('pausa10')
+                              
                                 if (seg < 59) {
                                     seg++;
                                     segundos.innerHTML = seg;
                                 } else if (seg == 59) {
                                     segundos.innerHTML = '0';
-                                    seg = 58;
+                                    seg = 0;
                                 }
                             }
 
@@ -251,17 +250,17 @@ function inicio() {
                     }
                     pausa10m();
                 }
-                console.log(validador)
+                
             }
 
         }, 1000);
 
 
-        console.log(validador)
+        
 
         setInterval(() => {
             if (validador === false) {
-                console.log('oi')
+               
                 if (seg < 59) {
                     seg++;
                     segundos.innerHTML = seg;
@@ -275,46 +274,52 @@ function inicio() {
 
 
     }
+
 
     const pomodoroCust = () => {
         const audio = document.querySelector('[data-audio]');
         let minutos = document.querySelector('[data-minutos]');
         let segundos = document.querySelector('[data-segundos]');
-
-        let min = 49;
-        let seg = 58;
+        const armazenaMin = Number(botPomoCust.value)
+        const armazenaPausa = Number(botCustPausa.value)
+       
+        let min = 0;
+        let seg = 0;
         minutos.innerHTML = min;
+
         setInterval(() => {
             if (validador == false) {
-
-                if (seg == 59 && min <= 50) {
+               
+                if (seg == 59 && min <= armazenaMin) {
                     min++;
                     minutos.innerHTML = min;
-                } else if (min === 50) {
+                } else if (min === armazenaMin) {
                     min = 26;
                     seg = 60;
                     segundos.innerHTML = '0';
                     audio.play();
-                    const pausa10m = () => {
+                    const pausaCust = () => {
                         const pausa5 = document.querySelector('[data-op-n]');
                         const pausaM = document.querySelector('[data-op-esc]');
                         pausa5.innerHTML = 'PAUSA';
-                        pausaM.innerHTML = '10min';
+                        pausaM.innerHTML = `${armazenaPausa} min`;
                         validador = true;
                         minutos.innerHTML = 0;
 
-                        min = 8;
-                        seg = 58;
-                        //pausa 10min
+                        min = 0;
+                        seg = 0;
+                        //pausa custom
                         setInterval(() => {
-
+                                
                             if (validador === true) {
-                                if (seg == 59 && min <= 10) {
+                                
+                                if (seg == 59 && min <= armazenaPausa) {
+                                  
                                     min++;
                                     minutos.innerHTML = min;
-                                } else if (min === 10) {
-                                    pausa5.innerHTML = 'PROLONGADO';
-                                    pausaM.innerHTML = '50min';
+                                } else if (min === armazenaPausa) {
+                                    pausa5.innerHTML = `Fim do ciclo` ;
+                                    pausaM.innerHTML = `${armazenaMin}/${armazenaPausa}`
                                     min = 60
                                     seg = 60
                                     segundos.innerHTML = '0';
@@ -323,39 +328,39 @@ function inicio() {
                                     validador = false
                                     setTimeout(() => {
                                         location.reload();
-                                    }, 4000)
+                                    }, 3000)
                                 }
                             }
                             //pausa 10min
 
 
                             if (validador === true) {
-                                console.log('pausa10')
+                                
                                 if (seg < 59) {
                                     seg++;
                                     segundos.innerHTML = seg;
                                 } else if (seg == 59) {
                                     segundos.innerHTML = '0';
-                                    seg = 58;
+                                    seg = 0;
                                 }
                             }
 
                         }, 1000)
 
                     }
-                    pausa10m();
+                    pausaCust();
                 }
-                console.log(validador)
+                
             }
 
         }, 1000);
 
 
-        console.log(validador)
+        
 
         setInterval(() => {
             if (validador === false) {
-                console.log('oi')
+            
                 if (seg < 59) {
                     seg++;
                     segundos.innerHTML = seg;
@@ -369,6 +374,9 @@ function inicio() {
 
 
     }
+
+
+  
    
 
 }

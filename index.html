@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ico.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Pomodoro</title>
 </head>
 
 <body>
@@ -19,9 +20,11 @@
             </ul>
         </nav>
     </header>
-    <div class="container">
 
+    <div class="container">
+       
         <div class="pomodoro">
+
 
             <span class="text-c">
 
@@ -47,23 +50,54 @@
             <button class="bot-op" data-bot-op2>50min</button>
 
             <span class="cont-bt">
-                
-                <input class="bot-op" id="cust" placeholder="Cust" data-bot-fk ></input>
 
-                <input type="number" class="bot-op" id="cust" data-bot-cust  style="display: none;" placeholder="Min" max="60" ></input>
+                <input class="bot-op" id="cust" placeholder="Cust" data-bot-fk></input>
+
+                <input type="number" class="bot-op" id="cust" data-bot-cust style="display: none;" placeholder="Min"
+                    max="60"></input>
 
                 <input type="number" style="display: none;" class="bot-op" id="cust" data-bot-pausa
                     placeholder="Pausa"></input>
-                
+
                 <button class="iniciar" data-bot-iniciar>Iniciar</button>
             </span>
+
             
+
         </section>
+
+
+    <span class="texto">A famosa "Técnica do Pomodoro" é um método de gerenciamento de tempo desenvolvido por Francesco
+        Cirillo no final dos anos 1980. <br> <br>
+        A técnica consiste na utilização de um cronômetro para dividir o trabalho em períodos de 25 minutos (por padrão),
+        separados por breves intervalos.<br><br>Seu nome deriva da palavra italiana pomodoro (tomate), como referência ao
+        popular cronômetro gastronômico na forma dessa
+        fruta. O método é baseado na ideia de que pausas frequentes podem aumentar a agilidade mental.</span>
+    
+    <span class="texto2">
+        Esse aplicativo foi desenvolvido com 3 opções sendo:
+        <br><br>
+    
+        <ul>
+            <li>Padrão: 25min com pausa de 5min;</li>
+            <br>
+            <li>50min com pausa de 10 minutos;</li>
+            <br>
+            <li>Customizado (limite de minutos 60min).</li>
+        </ul>
+        Fique à vontade para testar o seu tempo :D
+    </span>
+
+
         <span data-aviso style="display: none;">
             <p>Valor máximo para minutos: 60</p>
         </span>
         <audio data-audio src="alarme.mp3" controls></audio>
     </div>
+
+
+   
+
 
     <footer>
         <ul class="footer-b">
