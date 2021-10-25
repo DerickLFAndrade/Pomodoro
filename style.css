@@ -15,7 +15,7 @@ header {
     justify-content: center;
     align-items: center;
     position: fixed;
-    background: black;
+    background: rgba(0, 0, 0, 0.2);
     color: white;
     width: 100vw;
 }
@@ -34,6 +34,7 @@ header {
     font-weight: bold;
     width: 100px;
     text-align: center;
+    background: black;
 }
 
 .container {
@@ -207,7 +208,7 @@ footer {
    
     bottom: 0;
     left: 0;
-     background: black;
+     background: rgba(0, 0, 0, 0.2);
     color: white;
     width: 100vw;
 }
@@ -225,6 +226,7 @@ footer {
     width: 100px;
     text-align: center; 
     margin-left: -50px;
+    background: black;
 }  
 }
 @media screen and (min-width: 1002px) {
