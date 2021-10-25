@@ -20,7 +20,7 @@ header {
     width: 100vw;
 }
 .lista-nav {
-    
+    margin-left: -40px;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -237,6 +237,7 @@ footer {
     background: rgb(216, 224, 228);
 }
 header {
+  
     left: 0;
     top: 0;
     display: flex;
@@ -248,7 +249,7 @@ header {
     width: 100vw;
 }
 .lista-nav {
-    
+     margin-left: -50px;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
