@@ -47,7 +47,7 @@ function inicio() {
         botPomoCust.style.textAlign = 'left'
         botPomoCust.style.textIndent = '10px'
         const botIniciar = document.querySelector('[data-bot-iniciar]')
-        
+        botPomoCust.focus();
         botCustPausa.style.display = 'block'
         botCustPausa.style.textAlign = 'left'
         botCustPausa.style.textIndent = '10px'
